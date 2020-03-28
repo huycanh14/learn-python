@@ -16,4 +16,4 @@ result_2 = list(map(lambda x: x + 5, nums))
 
 result_3 = list(filter(lambda x: x % 2 == 0, nums))
 result_4 = list(filter(add_two, nums))
-print(result_4
+print(result_4)
