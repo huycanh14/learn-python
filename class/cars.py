@@ -11,13 +11,16 @@ class Car():
 		long_name = str(self.year) + ' ' + self.make + ' ' + self.model
 		return long_name
 
+
 	def read_km(self):
 		#print info about km
 		print('This car has ' + str(self.km_reading) + ' km on it')
 
+
 	def update_km(self, km):
 		# update km
 		self.km_reading = km
+
 
 my_new_car = Car('audi', 'a4', 2016)
 
