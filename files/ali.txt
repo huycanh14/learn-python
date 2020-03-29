@@ -1,3 +1,3 @@
-hi 
- hello world 
- bye
+Hello world
+this is python learning
+how to write data in file with pytho
