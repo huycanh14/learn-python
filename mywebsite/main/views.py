@@ -5,9 +5,15 @@ from .models import Main
 
 
 def home(request):
-    
-    return render(request, 'front/home.html')
+    # sitename = "MySite | Home"
+    # site = Main.objects.filter(pk=3)
+    site = Main.objects.get(pk=3)
+    # sitename = site.name + " | Home"
+
+    return render(request, 'front/home.html', {'site': site})
 
 
 def about(request):
-    return render(request, 'front/about.html')
+    # sitename = "MySite | About"
+    site = Main.objects.get(pk=3)
+    return render(request, 'front/about.html', {'site': site})
