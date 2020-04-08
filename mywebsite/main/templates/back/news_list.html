@@ -36,14 +36,13 @@
             </thead>
             <tbody>
                 {% for cc in news %}
-                {{cc}}
                 <tr>
                     <td class="text-center">{{cc.pk}}</td>
                     <td class="text-center"><img src="{% static 'back/img/placeholders/avatars/avatar15.jpg' %}" alt="avatar"
                             class="img-circle"></td>
                     <td>{{cc.name}}</td>
                     <td>{{cc.date}}</td>
-                    <td>-</td>
+                    <td>{{cc.catname}}</td>
                     <td>{{cc.writer}}</td>
                     <td>-</td>
                     <td class="text-center">
