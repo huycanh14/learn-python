@@ -38,18 +38,18 @@
                 {% for cc in news %}
                 <tr>
                     <td class="text-center">{{cc.pk}}</td>
-                    <td class="text-center"><img src="{% static 'back/img/placeholders/avatars/avatar15.jpg' %}" alt="avatar"
+                    <td class="text-center"><img src="{{cc.picurl}}" style="width:100px; height:100px;" alt="avatar"
                             class="img-circle"></td>
                     <td>{{cc.name}}</td>
                     <td>{{cc.date}} | {{cc.time}}</td>
                     <td>{{cc.catname}}</td>
                     <td>{{cc.writer}}</td>
-                    <td>-</td>
+                    <td>{{cc.show}}</td>
                     <td class="text-center">
                         <div class="btn-group">
                             <a href="javascript:void(0)" data-toggle="tooltip" title="Edit"
                                 class="btn btn-xs btn-default"><i class="fa fa-pencil"></i>Edit</a>
-                            <a href="javascript:void(0)" data-toggle="tooltip" title="Delete"
+                            <a href="{% url 'news_delete' pk=cc.pk %}" data-toggle="tooltip" title="Delete"
                                 class="btn btn-xs btn-danger"><i class="fa fa-times"></i>Delete</a>
                         </div>
                     </td>

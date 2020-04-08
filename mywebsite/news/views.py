@@ -65,3 +65,15 @@ def news_add(request):
             return render(request, 'back/error.html', {'error': error})
 
     return render(request, 'back/news_add.html')
+
+
+def news_delete(request, pk):
+    try:
+        b = News.objects.get(pk=pk)
+        fs = FileSystemStorage()
+        fs.delete(b.picname)
+        b.delete()
+    except:
+        error = "Somethong Wrong"
+        return render(request, 'back/error.html', {'error': error})
+    return redirect("news_list")
